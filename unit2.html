@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to BASH Shell</title>
+    <link href="linuxx.png" rel="icon" />
+    <style>
+        /* Basic Reset */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        /* Header and Footer Styling */
+        header, footer {
+            background-color: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1, footer p {
+            margin: 0;
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Container Styling */
+        .container {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 50px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        /* Headings Styling */
+        h2 {
+            color: #ff4500;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 3px;
+            background-color: #ff4500;
+            animation: expand 1s forwards;
+        }
+
+        /* List Styling */
+        ul {
+            margin-left: 20px;
+            animation: fadeIn 2s;
+        }
+
+        /* Example Box Styling */
+        .example {
+            background-color: #fafafa;
+            padding: 15px;
+            border-left: 5px solid #1a1a2e;
+            margin-top: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .example:hover {
+            background-color: #ffefd5;
+            border-left-color: #ff4500;
+            transform: scale(1.02);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes expand {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 50px;
+            }
+        }
+
+        /* Footer Hover Effect */
+        footer p:hover {
+            color: #ff4500;
+            transition: color 0.3s;
+        }
+
+
+        .navbar {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center; /* Center the navigation links */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline; /* Display items in a row */
+    margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #ff4500;
+    color: white;
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Introduction to BASH Shell (Unit - 2)</h1>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Index</a></li>
+                <li><a href="unit1.html">Unit 1</a></li>
+                <li><a href="unit3.html">Unit 3</a></li>
+                <li><a href="unit4.html">Unit 4</a></li>
+                <li><a href="unit5.html">Unit 5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+	
+	 <h2>Introduction to BASH Shell</h2>
+<p><strong>BASH</strong> (Bourne Again SHell) is a command-line interpreter that provides a command line interface for interacting with the operating system. It is the default shell for many Linux distributions and macOS, allowing users to execute commands, manage files, and automate tasks through scripting.</p>
+
+<h2>Key Features of BASH</h2>
+
+<h3>1. Command History</h3>
+<p>BASH keeps a history of commands you've executed, which you can easily access.</p>
+<p><strong>Example:</strong> Pressing the up arrow key retrieves the last command you entered.</p>
+
+<h3>2. Job Control</h3>
+<p>BASH allows users to run multiple processes in the background or foreground.</p>
+<p><strong>Example:</strong></p>
+<ul>
+    <li>To run a command in the background, append <code>&</code>:
+        <div class="example"><code>sleep 10 &</code></div>
+    </li>
+    <li>To bring a background job to the foreground, use the <code>fg</code> command.</li>
+</ul>
+
+<h3>3. Scripting</h3>
+<p>You can write scripts to automate tasks. A BASH script is a file containing a series of commands.</p>
+<p><strong>Example:</strong> Create a script <code>hello.sh</code>:</p>
+<div class="example"><code>#!/bin/bash\necho "Hello, World!"</code></div>
+<p>Make it executable and run:</p>
+<div class="example"><code>chmod +x hello.sh<br>./hello.sh</code></div>
+
+<h2>Common BASH Commands</h2>
+
+<h3>1. Navigating the File System</h3>
+<p><strong>Listing Files:</strong></p>
+<div class="example"><code>ls</code></div>
+<p><strong>Change Directory:</strong></p>
+<div class="example"><code>cd Documents</code></div>
+
+<h3>2. File Manipulation</h3>
+<p><strong>Copy Files:</strong></p>
+<div class="example"><code>cp file.txt backup_file.txt</code></div>
+<p><strong>Move/Rename Files:</strong></p>
+<div class="example"><code>mv oldname.txt newname.txt</code></div>
+<p><strong>Delete Files:</strong></p>
+<div class="example"><code>rm file.txt</code></div>
+
+<h3>3. Directory Management</h3>
+<p><strong>Create a Directory:</strong></p>
+<div class="example"><code>mkdir new_directory</code></div>
+<p><strong>Remove a Directory:</strong></p>
+<div class="example"><code>rmdir empty_directory</code></div>
+
+<h3>4. Viewing File Contents</h3>
+<p><strong>Display Contents:</strong></p>
+<div class="example"><code>cat file.txt</code></div>
+<p><strong>View File with Pagination:</strong></p>
+<div class="example"><code>less file.txt</code></div>
+
+<h3>5. Getting Help</h3>
+<p>Most commands come with built-in help. Use <code>man</code> (manual) for detailed documentation.</p>
+<p><strong>Example:</strong></p>
+<div class="example"><code>man ls</code></div>
+
+<h3>6. Using Variables</h3>
+<p>You can store values in variables.</p>
+<p><strong>Example:</strong></p>
+<div class="example"><code>name="Alice"<br>echo "Hello, $name!"</code></div>
+
+    <p>BASH is a powerful tool for interacting with the operating system, offering extensive features for file management, scripting, and system control. Mastering BASH commands and scripting can significantly enhance productivity and streamline workflows in a Unix-like environment.</p>
+
+	
+	
+        <p>The BASH (Bourne Again SHell) is a command-line interpreter used in many Linux distributions and macOS. It allows users to interact with the operating system by executing commands and scripts. It supports features like command history, job control, and scripting capabilities.</p>
+
+        <h2>Working with Files</h2>
+        <p>BASH provides numerous commands for file manipulation, allowing you to manage files and directories effectively.</p>
+
+        <h3>Listing Files</h3>
+        <p><strong>Command:</strong> <code>ls</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>ls</code></div>
+        <p>This command lists files in the current directory.</p>
+
+        <p><strong>With options:</strong></p>
+        <div class="example"><code>ls -l</code></div>
+        <p>This command lists files in long format, showing permissions, ownership, file size, and modification date.</p>
+
+        <h3>Copying Files and Directories</h3>
+        <p><strong>Command:</strong> <code>cp</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>cp source.txt destination.txt</code></div>
+        <p>This command copies <code>source.txt</code> to <code>destination.txt</code>.</p>
+
+        <p><strong>Copying a directory:</strong></p>
+        <div class="example"><code>cp -r source_dir/ destination_dir/</code></div>
+        <p>The <code>-r</code> option is used to copy directories recursively.</p>
+
+        <h3>Moving Files and Directories</h3>
+        <p><strong>Command:</strong> <code>mv</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>mv oldname.txt newname.txt</code></div>
+        <p>This command renames <code>oldname.txt</code> to <code>newname.txt</code>.</p>
+
+        <p><strong>Moving a file to a different directory:</strong></p>
+        <div class="example"><code>mv file.txt /path/to/directory/</code></div>
+
+        <h3>Deleting Files and Directories</h3>
+        <p><strong>Command:</strong> <code>rm</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>rm file.txt</code></div>
+        <p>This command deletes <code>file.txt</code>.</p>
+
+        <p><strong>Deleting a directory:</strong></p>
+        <div class="example"><code>rm -r directory_name/</code></div>
+        <p>Use <code>-r</code> to delete directories and their contents.</p>
+
+        <h2>Changing and Creating Directories</h2>
+        <p><strong>Creating a directory:</strong></p>
+        <p><strong>Command:</strong> <code>mkdir</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>mkdir new_directory</code></div>
+
+        <p><strong>Changing the current directory:</strong></p>
+        <p><strong>Command:</strong> <code>cd</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>cd new_directory</code></div>
+
+        <h2>Real Files and Virtual Files</h2>
+        <p><strong>Real files:</strong> These are standard files stored on disk.</p>
+        <p><strong>Virtual files:</strong> These are not real files but represent system information (e.g., <code>/proc</code>, <code>/sys</code>).</p>
+
+        <h2>Users and File Permissions</h2>
+        <p><strong>Viewing file permissions:</strong></p>
+        <p><strong>Command:</strong> <code>ls -l</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>ls -l</code></div>
+        <p>This will show the permissions of files, formatted as <code>rwxr-xr-x</code>.</p>
+
+        <p><strong>Changing permissions:</strong></p>
+        <p><strong>Command:</strong> <code>chmod</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>chmod 755 script.sh</code></div>
+
+        <h2>The File System Explained</h2>
+        <p>The Linux file system is hierarchical. It starts at the root (<code>/</code>) and branches out to directories and files. Common directories include:</p>
+        <ul>
+            <li><code>/home</code>: User home directories</li>
+            <li><code>/etc</code>: Configuration files</li>
+            <li><code>/var</code>: Variable files, like logs</li>
+        </ul>
+
+        <h2>File Searches</h2>
+        <p>BASH provides several commands to search for files.</p>
+
+        <h3>Using the <code>find</code> Command</h3>
+        <p><strong>Command:</strong> <code>find</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>find /path/to/search -name "*.txt"</code></div>
+        <p>This searches for all <code>.txt</code> files in the specified directory.</p>
+
+        <h3>Using the <code>locate</code> Command</h3>
+        <p><strong>Command:</strong> <code>locate</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>locate filename</code></div>
+        <p>This finds files by name using a database that is updated periodically.</p>
+
+        <h3>Using the <code>whereis</code> Command</h3>
+        <p><strong>Command:</strong> <code>whereis</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>whereis bash</code></div>
+        <p>This finds the binary, source, and manual page for <code>bash</code>.</p>
+
+        <h2>File Size and Free Space</h2>
+        <p>You can check file sizes and free disk space with several commands.</p>
+
+        <h3>Viewing File Sizes</h3>
+        <p><strong>Command:</strong> <code>du</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>du -h filename</code></div>
+        <p>This displays the size of the specified file or directory in a human-readable format.</p>
+
+        <h3>Finding Out the Amount of Free Space</h3>
+        <p><strong>Command:</strong> <code>df</code></p>
+        <p><strong>Example:</strong></p>
+        <div class="example"><code>df -h</code></div>
+        <p>This shows disk space usage for all mounted filesystems in a human-readable format.</p>
+
+        </div>
+
+    <footer>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">BACK TO Home Index</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024. All rights reserved. Design by Deepak Saini</a></p>
+    </footer>
+
+</body>
+</html>

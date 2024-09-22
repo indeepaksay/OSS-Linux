@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Linux</title>
+    <link href="linuxx.png" rel="icon" />
+    <style>
+    /* Basic Reset */
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f8ff;
+        color: #333;
+    }
+
+    /* Header and Footer Styling */
+    header, footer {
+        background-color: #1a1a2e;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    header h1, footer p {
+        margin: 0;
+        animation: fadeIn 2s ease-out forwards;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+    /* Container Styling */
+    .container {
+        padding: 40px;
+        max-width: 1000px;
+        margin: 50px auto;
+        background: #ffffff;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        animation: slideIn 1.5s ease-out;
+    }
+ 
+    /* Headings Styling */
+    h2 {
+        color: #ff4500;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        position: relative;
+    }
+
+    h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 50px;
+        height: 3px;
+        background-color: #ff4500;
+        animation: expand 1s forwards;
+    }
+
+    /* List Styling */
+    ul {
+        margin-left: 20px;
+        animation: fadeIn 2s;
+    }
+
+    /* Example Box Styling */
+    .example {
+        background-color: #fafafa;
+        padding: 15px;
+        border-left: 5px solid #1a1a2e;
+        margin-top: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .example:hover {
+        background-color: #ffefd5;
+        border-left-color: #ff4500;
+        transform: scale(1.02);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes expand {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 50px;
+        }
+    }
+    /* Footer Hover Effect */
+    footer p:hover {
+        color: #ff4500;
+        transition: color 0.3s;
+    }
+
+    .navbar {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center; /* Center the navigation links */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline; /* Display items in a row */
+    margin: 0 15px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #ff4500;
+    color: white;
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+
+    
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Unit 5</h1>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Index</a></li>
+            <li><a href="unit1.html">Unit 1</a></li>
+            <li><a href="unit2.html">Unit 2</a></li>
+            <li><a href="unit3.html">Unit 3</a></li>
+            <li><a href="unit4.html">Unit 4</a></li>
+            
+        </ul>
+    </nav>
+
+</header>
+
+
+
+
+<footer>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">BACK TO Home Index</a></li>
+        </ul>
+    </nav>
+    <p>&copy; 2024. All rights reserved. Design by Deepak Saini</a></p>
+</footer>
+
+</body>
+</html>

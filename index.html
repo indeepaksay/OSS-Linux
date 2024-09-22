@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Index</title>
+    <link href="linuxx.png" rel="icon" />
+    <style>
+        /* Basic Reset */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        /* Header and Footer Styling */
+        header, footer {
+            background-color: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1, footer p {
+            margin: 0;
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Container Styling */
+        .container {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 50px auto;
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        /* Headings Styling */
+        h2 {
+            color: #ff4500;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 3px;
+            background-color: #ff4500;
+            animation: expand 1s forwards;
+        }
+
+        /* List Styling */
+        ul {
+            margin-left: 20px;
+            animation: fadeIn 2s;
+        }
+
+        li {
+            margin: 10px 0;
+            transition: background 0.3s, transform 0.3s;
+            border-bottom: 1px solid #ccc;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1a1a2e;
+            padding: 10px;
+            display: block;
+            text-shadow: #1a1a2e;
+        }
+
+        a:hover {
+            background: #ffefd5;
+            color: #ff4500;
+            transform: scale(1.02);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes expand {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 50px;
+            }
+        }
+
+        /* Footer Hover Effect */
+        footer p:hover {
+            color: #ff4500;
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Open Source Software and Linux</h1>
+</header>
+
+<div class="container">
+    <h2>Units Overview</h2>
+    <ul>
+        <li><a href="unit1.html">Unit 1: Introduction To LINUX</a></li>
+        <li><a href="unit2.html">Unit 2: Bash Shell</a></li>
+        <li><a href="unit3.html">Unit 3: Writer — The Word Processor</a></li>
+        <li><a href="unit4.html">Unit 4: CALC — The Spreadsheet</a></li>
+        <li><a href="unit5.html">Unit 5: IMPRESS — The Presentation</a></li>
+    </ul>
+</div>
+
+<footer>
+    
+        <p>&copy; 2024. All rights reserved. Design by Deepak Saini</a></p>
+
+</footer>
+
+</body>
+</html>
